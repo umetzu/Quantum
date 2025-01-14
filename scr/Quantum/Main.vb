@@ -1,7 +1,6 @@
 ﻿Imports System.IO
 Imports Microsoft.Win32
 Imports QBittorrent.Client
-Imports GitHubUpdate
 
 Public Class Main
 
@@ -106,6 +105,7 @@ Public Class Main
     Private Async Function UpdatePort(ByVal pPort As Integer) As Task
 
         Try
+            CrashDetector.ExitIfCrashed()
 
             ' Open a new connection to qBittorrnet
             Dim Client = New QBittorrentClient(New Uri(My.Settings.Host))

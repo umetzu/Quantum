@@ -1,5 +1,9 @@
 # Automatic qBittorrent Port Updater for ProtonVPN
 
+## fork changes
+restart qbittorrent if crash window detected
+https://github.com/qbittorrent/qBittorrent/issues/17082
+
 This application will monitor the Windows ProtonVPN client log files for port changes and pass them via the qBittorrent WebUI.
 
 In order to clone this repository you need to use the following command, or it wont clone the linked submodules
