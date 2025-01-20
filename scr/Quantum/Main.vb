@@ -26,7 +26,7 @@ Public Class Main
     Private Async Function CheckConnection() As Task
 
         Try
-
+            CrashDetector.ExitIfCrashed()
             ' Clear the log display
             LV_VPNLogFile.Items.Clear()
 
@@ -105,7 +105,6 @@ Public Class Main
     Private Async Function UpdatePort(ByVal pPort As Integer) As Task
 
         Try
-            CrashDetector.ExitIfCrashed()
 
             ' Open a new connection to qBittorrnet
             Dim Client = New QBittorrentClient(New Uri(My.Settings.Host))
